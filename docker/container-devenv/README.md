@@ -1,4 +1,4 @@
-#Dockerized development environment
+# Dockerized development environment
 
 This is example of development environment at the Docker container.
 It's tested only at Linux.
@@ -12,7 +12,7 @@ This might be broken if your desktop UID is not 1000. I didn't test that kind of
 Building is just done with:
 docker build -t devenv .
 
-##Running
+## Running
 
 Running is a bit more complicated. I'm using following script:
 
@@ -20,7 +20,7 @@ docker run -ti -u $UID -v $HOME/src:/workdir -w /workdir -e DISPLAY=$DISPLAY -v 
 
 It starts automatically the Code IDE.
 
-###What does it do?
+### What does it do?
 
 *-u $UID* sets the container user for the same ID as you are. This way you have access to your own files at the host machine
 *-v $HOME/src:/workdir* Set's the src directory in your home directory to /workingdir inside the container. When you open the files, you open them from here
